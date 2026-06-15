@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "EBGaramond";
+    src: url(../fonts/EBGaramond-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryColor: #3A3845;
+    --primaryFont: "EBGaramond";
+    --headingFont: "Inter";
+}
+body{
+    font-family: var(--primaryFont), serif;
+}
+h1,h2,h3,h4,h5,h6,a{
+    font-family: var(--headingFont), sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/*start header section*/
+.header{
+    padding: 21.84px 0;
+    background-color: rgb(210, 174, 243);
+}
+.header .row{
+    justify-content: space-between;
+}
+.menu{
+    display: none;
+}
+.list ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.list a{
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+.icons ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    .list,.hidden_icon{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .header .container{
+        width: 95%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .header .container{
+        width: 95%;
+    }
+}
+/*end header section*/
