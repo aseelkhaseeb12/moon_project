@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "EBGaramond";
-    src: url(../fonts/EBGaramond-VariableFont_wght.ttf);
+    font-family: "CormorantGaramond";
+    src: url(../fonts/CormorantGaramond-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "Inter";
@@ -13,13 +13,15 @@
 }
 :root{
     --primaryColor: #3A3845;
-    --primaryFont: "EBGaramond";
-    --headingFont: "Inter";
+    --primaryFont: "Inter";
+    --headingFont: "CormorantGaramond";
+    --sliderShopColor: #826F66;
+    --sliderTextColor: #FFFDFB;
 }
 body{
     font-family: var(--primaryFont), serif;
 }
-h1,h2,h3,h4,h5,h6,a{
+h1,h2,h3,h4,h5,h6{
     font-family: var(--headingFont), sans-serif;
 }
 ul{
@@ -40,7 +42,6 @@ a{
 /*start header section*/
 .header{
     padding: 21.84px 0;
-    background-color: rgb(210, 174, 243);
 }
 .header .row{
     justify-content: space-between;
@@ -83,3 +84,76 @@ a{
     }
 }
 /*end header section*/
+/*start slider section*/
+.slider{
+    position: relative;
+}
+.sliderBG{
+    height: 100vh;
+}
+.slider1_image{
+    width: 100%;
+    height: 100%;
+}
+.slider1_image_hidden{
+    display: none;
+}
+.slider_shop{
+    background-color: var(--sliderShopColor);
+    text-align: center;
+    width: 420px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shop_para{
+    color: var(--sliderTextColor);
+    line-height: 24px;
+    margin-top: 42px;
+}
+.heading_shop{
+    text-transform: uppercase;
+    color: var(--sliderTextColor);
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 4%;
+    margin-top: 20px;
+}
+.shop_button{
+    text-transform: uppercase;
+    color: var(--sliderShopColor);
+    background-color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: 4%;
+    padding: 15px 71px;
+    margin-top: 42px;
+}
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    .slider1_image{
+        display: none;
+    }
+    .slider1_image_hidden{
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .slider .container{
+        width: 100%;
+    }
+    .slider_shop{
+        position: static;
+        width: 100%;
+        padding: 47.21px 0;
+    }
+    .shop_para, .shop_button{
+        margin-top: 30px;
+    }
+}
+/*end slider section*/
