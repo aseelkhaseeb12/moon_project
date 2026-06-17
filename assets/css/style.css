@@ -14,14 +14,17 @@
 :root{
     --primaryColor: #3A3845;
     --primaryFont: "Inter";
-    --headingFont: "CormorantGaramond";
+    /* --headingFont: "CormorantGaramond"; */
+    --headingFont: "Garamond";
     --sliderShopColor: #826F66;
     --sliderTextColor: #FFFDFB;
+    --christmasColor: #F7F6F5;
+    --christmasParaColor: #595667;
 }
 body{
     font-family: var(--primaryFont), serif;
 }
-h1,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6{
     font-family: var(--headingFont), sans-serif;
 }
 ul{
@@ -177,6 +180,7 @@ a{
     line-height: 24px;
     font-weight: 600;
     letter-spacing: 6%;
+    font-family: var(--primaryFont);
     margin-top: 12px;
 }
 @media screen and (min-width: 320px) and (max-width: 767.98px) {
@@ -191,5 +195,71 @@ a{
     .collections .collection{
         width: calc((100% - 30px) / 2);
     }
-}  
+}
 /*end collection section*/
+/*start christmas_collections section*/
+.christmas_collection{
+    width: calc(100%/2);
+}
+.christmas_1{
+    background-color: var(--christmasColor);
+    padding: 67px 60px;
+    text-align: center;
+}
+.christmas_heading{
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 4%;
+    color: var(--primaryColor);
+    margin-bottom: 24px;
+    width: 398px;
+}
+.christmas_para::first-letter{
+    text-transform: uppercase;
+}
+.christmas_para{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--christmasParaColor);
+    margin-bottom: 32px;
+    width: 389px;
+}
+.christmas_a{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 6%;
+    color: var(--primaryColor);
+    padding: 15px 18px;
+    text-underline-offset: 3px;
+}
+.christmas_collection img{
+    display: block;
+}
+.christmas_collection .christmas_small{
+    display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    .christmas_collections .container{
+        width: 100%;
+    }
+    .christmas_collections .row{
+        flex-direction: column;
+    }
+    .christmas_collection{
+        width: 100%;
+    }
+    .christmas_collection img{
+        display: none;
+    }
+    .christmas_collection .christmas_small{
+        width: 100%;
+        display: block;
+    }
+} 
+/*end christmas_collections section*/
