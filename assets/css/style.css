@@ -14,7 +14,6 @@
 :root{
     --primaryColor: #3A3845;
     --primaryFont: "Inter";
-    /* --headingFont: "CormorantGaramond"; */
     --headingFont: "Garamond";
     --sliderShopColor: #826F66;
     --sliderTextColor: #FFFDFB;
@@ -90,15 +89,12 @@ a{
 .slider{
     position: relative;
 }
-.sliderBG{
-    height: 100vh;
+.slider_image{
+    /* height: 100vh; */
 }
-.slider1_image{
+.slider_image img{
     width: 100%;
-    height: 100%;
-}
-.slider1_image_hidden{
-    display: none;
+    /* height: 100%; */
 }
 .slider_shop{
     background-color: var(--sliderShopColor);
@@ -106,7 +102,7 @@ a{
     width: 420px;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,17 +133,10 @@ a{
     margin-top: 42px;
 }
 @media screen and (min-width: 320px) and (max-width: 767.98px) {
-    .sliderBG{
-        height: auto;
-    }
-    .slider1_image{
-        display: none;
-    }
-    .slider1_image_hidden{
+    .slider_image img{
         display: block;
-        width: 100%;
-        /* height: 100%; */
-        height: auto;
+        height: 320px;
+        object-fit: cover;
     }
     .slider .container{
         width: 100%;
@@ -157,8 +146,23 @@ a{
         width: 100%;
         padding: 47.21px 0;
     }
+    .slider_shop img{
+        width: 50px;
+    }
     .shop_para, .shop_button{
         margin-top: 30px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .slider_shop{
+        width: fit-content;
+    }
+    .slider_shop img{
+        width: 50px;
+    }
+    .shop_para{
+        margin-top: 15px;
+        padding: 0 10px;
     }
 }
 /*end slider section*/
@@ -183,37 +187,70 @@ a{
     line-height: 24px;
     font-weight: 600;
     letter-spacing: 6%;
-    font-family: var(--primaryFont);
     margin-top: 12px;
 }
-@media screen and (min-width: 320px) and (max-width: 767.98px) {
+@media screen and (min-width: 320px) and (max-width: 442.98px) {
     .collections{
         padding: 30px 0;
     }
     .collections .container{
         width: 95%;
     }
+    .collections .row{
+        gap: 5px;
+    }
     .collections .collection{
-        width: 100%;
+        width: calc((100% - 5px) / 2);
+    }
+    .heading_collection{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 443px) and (max-width: 767.98px) {
+    .collections{
+        padding: 30px 0;
+    }
+    .collections .container{
+        width: 95%;
+    }
+    .collections .row{
+        gap: 5px;
+    }
+    .collections .collection{
+        width: calc((100% - 10px) / 3);
+    }
+    .heading_collection{
+        font-size: 15px;
+        margin-top: 10px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .collections{
+        padding: 30px 0;
+    }
+    .collections .row{
+        gap: 15px;
+    }
     .collections .collection{
-        width: calc((100% - 30px) / 2);
+        width: calc((100% - 30px) / 3);
     }
 }
 /*end collection section*/
 /*start christmas_collections section*/
-.christmas_collection{
+.christmas_collections .row{
+    background-color: aqua;
+}
+.text_collection,.image_collection{
     width: calc(100%/2);
-    text-align: center;
 }
-.christmas_1{
+.text_collection{
     background-color: var(--christmasColor);
-    padding: 64px 60px;
-    
+    text-align: center;
+    padding: 63px 60px;
+
 }
-.christmas_heading{
+.text_collection h2{
     text-transform: uppercase;
     font-size: 28px;
     line-height: 32px;
@@ -221,20 +258,18 @@ a{
     letter-spacing: 4%;
     color: var(--primaryColor);
     margin-bottom: 24px;
-    width: 398px;
 }
-.christmas_para::first-letter{
+.text_collection p::first-letter{
     text-transform: uppercase;
 }
-.christmas_para{
+.text_collection p{
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: var(--christmasParaColor);
     margin-bottom: 32px;
-    width: 389px;
 }
-.christmas_a{
+.text_collection a{
     text-decoration: underline;
     text-transform: uppercase;
     font-size: 14px;
@@ -242,34 +277,77 @@ a{
     font-weight: 700;
     letter-spacing: 6%;
     color: var(--primaryColor);
-    padding: 15px 18px;
-    text-underline-offset: 3px;
 }
-.christmas_collection .christmas_big{
+.image_collection img{
     display: block;
     width: 100%;
-}
-.christmas_collection .christmas_small{
-    display: none;
+    /* height: 348px;
+    object-fit: cover; */
 }
 @media screen and (min-width: 320px) and (max-width: 767.98px) {
     .christmas_collections .container{
         width: 100%;
     }
-    .christmas_collection{
-        width: 100%;
-        text-align: center;
-    }
-    .christmas_1{
+    .text_collection{
         padding: 50px 16px;
     }
-    .christmas_collection .christmas_big{
-        display: none;
+    .text_collection,.image_collection{
+        width: 100%;
     }
-    .christmas_collection .christmas_small{
+    .text_collection h2{
+        margin-bottom: 24px;
+    }
+    .text_collection p{
+        margin-bottom: 32px;
+    }
+    .image_collection img{
+        height: 348px;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .text_collection{
+        padding: 40px 16px;
+    }
+    .image_collection img{
+        height: 348px;
+        object-fit: cover;
+    }
+    /* .christmas_collections .container{
+        width: 100%;
+    }
+    .text_collection{
+        padding: 50px 16px;
+    }
+    .text_collection,.image_collection{
+        width: 100%;
+    }  */
+    
+    /* .text_collection,.image_collection{
+        
+        text-align: center;
+    } */
+    /* .text_collection h2,.text_collection p{
+        width: 100%;
+        max-width: 100%;
+    } */
+    /* image_collection img{
+        display: none;
+    } */
+    /* .christmas_collection .christmas_small{
         width: 100%;
         height: auto;
         display: block;
+    } */
+}
+
+/* @media screen and (min-width: 768px){
+    .christmas_collections .row{
+        background-color: aqua;
     }
-} 
+    .christmas_heading,.christmas_para{
+        width: 50%;
+        max-width: 50%;
+    }
+} */
 /*end christmas_collections section*/
