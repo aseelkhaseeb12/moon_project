@@ -585,3 +585,99 @@ a{
     }
 }
 /* end discover section */
+/* start blog section */
+.blog .blog_t{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    font-style: Bold;
+    color: var(--primaryColor);
+    margin-bottom: 48px;
+}
+.text_blog,.image_blog{
+    width: calc(100%/2);
+}
+.text_blog{
+    background-color: var(--christmasColor);
+    text-align: center;
+    padding: 61px 71px;
+}
+.text_blog .blog_t_one{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    font-style: Bold;
+    letter-spacing: 6%;
+    color: var(--addButtonColor);
+    margin-bottom: 24px;
+}
+.text_blog .blog_title{
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 4%;
+    color: var(--primaryColor);
+    margin-bottom: 24px;
+}
+.text_blog .blog_desc::first-letter{
+    text-transform: uppercase;
+}
+.text_blog .blog_desc{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--christmasParaColor);
+    margin-bottom: 32px;
+}
+.text_blog .read_blog{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 6%;
+    color: var(--christmasParaColor);
+    text-underline-offset: 3px;
+}
+.image_blog img{
+    display: block;
+    width: 100%;
+    height: 383px;
+    object-fit: cover;
+}
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+    .blog .blog_t{
+        padding-top: 30px;
+    }
+    .blog .container{
+        width: 100%;
+    }
+    .blog .row{
+        flex-direction: column-reverse;
+    }
+    .text_blog,.image_blog{
+        width: 100%;
+    }
+    .text_blog{
+        padding: 25px 10px;
+    }
+    .image_blog img{
+        height: 297px;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .text_blog{
+        padding: 49px 16px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .text_blog{
+        padding: 61px 56px;
+    }
+}
+/* end blog section */
