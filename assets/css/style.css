@@ -20,6 +20,8 @@
     --christmasColor: #F7F6F5;
     --christmasParaColor: #595667;
     --addButtonColor: #807F86;
+    --footerColor: #E5E5E5;
+    --vectorColor: #CAC9CF;
 }
 body{
     font-family: var(--primaryFont), serif;
@@ -89,9 +91,6 @@ a{
 /*start slider section*/
 .slider{
     position: relative;
-}
-.slider_image{
-    /* height: 100vh; */
 }
 .slider_image img{
     width: 100%;
@@ -761,3 +760,166 @@ a{
     }
 }
 /* end Newsletter section */
+/* start footer section */
+.footer{
+    background-color: var(--primaryColor);
+    box-shadow: 0px 1px 4px 0px #19213D14 8%;
+}
+.footer .container{
+    background-color: red;
+}
+.footer .Footer_Top{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+.Footer_Top .Grid{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    margin-right: 80.27px;
+}
+.grid_logo{
+    margin-top: 48px;
+}
+.Footer_Description p::first-letter{
+    text-transform: uppercase;
+}
+.Footer_Description p{
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--footerColor);
+}
+.Footer_Button{
+    margin-top: 32px;
+    display: flex;
+    gap: 3px;
+    width: 154px;
+    background-color: transparent;
+    padding: 15px 18px;
+    border: 1px solid var(--christmasColor);
+}
+.Footer_Button p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    font-style: Bold;
+    letter-spacing: 8%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--footerColor);
+}
+.Vector{
+    border: 1px solid var(--vectorColor);
+    height: 318px;
+}
+.Links{
+    margin-left: 80.27px;
+}
+.Content{
+    display: flex;
+    gap: 72px;
+    padding-top: 48px;
+    background-color: rgb(143, 143, 54);
+}
+.Footer_Column{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: rgb(136, 54, 143);
+}
+.Footer_Title{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    font-style: Bold;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.Grid_Column ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footer_link{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--footerColor);
+}
+.Footer_Bottom{
+    border-top: 1px solid var(--vectorColor);
+    padding: 32px 0;
+}
+.Footer_Bottom .Copyright{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--footerColor);
+}
+.Footer_Bottom .Copyright span{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .footer .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+    }
+    .footer .Footer_Top{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+    .Footer_Top .Grid{
+        display: flex;
+        flex-direction: column;
+        background-color: blue;
+        margin-right: 0;
+    }
+    .grid_logo{
+        margin-top: 32px;
+    }
+    .Footer_Button{
+        width: 147px;
+    }
+    .Vector{
+        border: 1px solid var(--vectorColor);
+        height: 0;
+    }
+    .Links{
+        margin-left: 0;
+        /* flex-direction: column;
+        gap: 10px; */
+    }
+    .Content{
+        flex-direction: column;
+        gap: 48px;
+        padding-top: 0;
+    }
+    .Footer_Column{
+        width: calc((100% - 96px)/2);
+        gap: 30px;
+    }
+    .Footer_Bottom{
+        border-top: 1px solid var(--vectorColor);
+        padding: 30px 32px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(51, 80, 80);
+    }
+}
+/* end footer section */
