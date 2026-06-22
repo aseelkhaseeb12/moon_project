@@ -498,7 +498,7 @@ a{
 .discover_products{
     padding: 80px 0;
 }
-.discover_products > h2{
+.discover_products .heading .discover_heading{
     text-transform: uppercase;
     text-align: center;
     font-size: 30px;
@@ -508,10 +508,9 @@ a{
     color: var(--primaryColor);
     margin-bottom: 48px;
 }
-
 .discover_products .row{
-    gap: 30px;
     align-items: stretch;
+    gap: 30px;
 }
 .discover_item{
     width: calc((100% - 90px) / 4);
@@ -519,27 +518,35 @@ a{
     flex-direction: column;
     justify-content: space-between;
 }
-.discover_item img{
-    width: 100%;
-    margin-bottom: 15px;
+.discover_item .top{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* gap: 10px; */
 }
-.discover_item .item_name{
+.discover_image img{
+    width: 100%;
+}
+.Product_info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.Product_info .Product_name p{
     text-transform: uppercase;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 6%;
     font-weight: 600;
     color: var(--primaryColor);
-    margin-bottom: 3px;
 }
-.discover_item .item_price{
+.Product_info .Product_Price p{
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
-    color: var(--primaryColor);
-    margin-bottom: 12px;
+    color: var(--primaryColor); 
 }
-.discover_item .item_desc::first-letter{
+.discover_item .Product_desc::first-letter{
     text-transform: uppercase;
 }
 .discover_item .item_desc{
@@ -548,18 +555,18 @@ a{
     font-weight: 400;
     color: var(--addButtonColor);
 }
-.discover_item .add_item{
+.discover_item .Secondary_Button{
     text-transform: uppercase;
-    text-align: center;
+    background-color: white;
+    border: 1px solid var(--primaryColor);
+    padding: 15px 18px;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 8%;
     font-weight: 600;
+    text-align: center;
     color: var(--primaryColor);
-    border: 1px solid var(--primaryColor);
-    padding: 15px 0;
-    display: block;
-    margin-top: 40px;
+    margin-top: 58px;
 }
 @media screen and (min-width: 320px) and (max-width: 575.98px) {
     .discover_products{
@@ -582,6 +589,11 @@ a{
     }
     .discover_item .add_item{
         margin-top: 67px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .discover_item{
+        width: calc((100% - 30px) / 2);
     }
 }
 /* end discover section */
@@ -634,6 +646,8 @@ a{
     margin-bottom: 32px;
 }
 .text_blog .read_blog{
+    border-style: none;
+    background-color: transparent;
     text-decoration: underline;
     text-transform: uppercase;
     font-size: 14px;
@@ -681,3 +695,69 @@ a{
     }
 }
 /* end blog section */
+/* start Newsletter section */
+.Newsletter{
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Newsletter .Newsletter_para::first-letter{
+    text-transform: uppercase;
+}
+.Newsletter .Newsletter_para{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    font-style: Bold;
+    color: var(--christmasParaColor);
+    margin-bottom: 24px;
+}
+.Newsletter .Newsletter_title{
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: Bold;
+    letter-spacing: 4%;
+    text-align: center;
+    color: var(--primaryColor);
+    margin-bottom: 24px;
+}
+.Newsletter .Newsletter_input{
+    border-style: none;
+    border-bottom: 1px solid var(--primaryColor);
+    text-align: center;
+    padding: 14px 0;
+    width: 389px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--christmasParaColor);
+    margin-bottom: 32px;
+}
+.Newsletter .Newsletter_button{
+    background-color: White;
+    border: 1px solid var(--primaryColor);
+    padding: 15px 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 8%;
+    color: var(--primaryColor);
+}
+@media screen and (min-width: 0) and (max-width: 320px){
+    .Newsletter .Newsletter_input,.Newsletter_title{
+        width: 249px;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 575.98px) {
+    .Newsletter{
+        padding: 40px 0;
+    }
+    .Newsletter .Newsletter_input,.Newsletter_title{
+        width: 350px;
+    }
+}
+/* end Newsletter section */
