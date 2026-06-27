@@ -36,7 +36,8 @@ a{
     text-decoration: none;
 }
 .container{
-    width: 80%;
+    /* width: 80%; */
+    width: 85%;
     margin: auto;
 }
 .row{
@@ -175,7 +176,8 @@ a{
     gap: 30px;
 }
 .collections .collection{
-    width: calc((100% - 90px)/ 4);
+    /* width: calc((100% - 90px)/ 4); */
+    flex-grow: 1;
 }
 .collection img{
     width: 100%;
@@ -765,9 +767,6 @@ a{
     background-color: var(--primaryColor);
     box-shadow: 0px 1px 4px 0px #19213D14 8%;
 }
-.footer .container{
-    background-color: red;
-}
 .footer .Footer_Top{
     display: flex;
     justify-content: space-between;
@@ -776,27 +775,29 @@ a{
 .Footer_Top .Grid{
     display: flex;
     flex-direction: column;
-    background-color: blue;
-    margin-right: 80.27px;
+    align-items: start;
+    width: 100%;
+    max-width: 30%;
+    padding-top: 48px;
 }
-.grid_logo{
-    margin-top: 48px;
+.Footer_Description{
+    margin-top: 24px;
 }
 .Footer_Description p::first-letter{
     text-transform: uppercase;
 }
 .Footer_Description p{
-    margin-top: 24px;
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
     color: var(--footerColor);
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 .Footer_Button{
     margin-top: 32px;
     display: flex;
     gap: 3px;
-    width: 154px;
     background-color: transparent;
     padding: 15px 18px;
     border: 1px solid var(--christmasColor);
@@ -810,25 +811,24 @@ a{
     text-align: center;
     text-transform: uppercase;
     color: var(--footerColor);
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 .Vector{
     border: 1px solid var(--vectorColor);
     height: 318px;
 }
 .Links{
-    margin-left: 80.27px;
+    padding-top: 48px;
 }
 .Content{
     display: flex;
     gap: 72px;
-    padding-top: 48px;
-    background-color: rgb(143, 143, 54);
 }
 .Footer_Column{
     display: flex;
     flex-direction: column;
     gap: 32px;
-    background-color: rgb(136, 54, 143);
 }
 .Footer_Title{
     font-size: 16px;
@@ -838,17 +838,22 @@ a{
     letter-spacing: 6%;
     text-transform: uppercase;
     color: #FFFFFF;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 .Grid_Column ul{
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
+.Grid_Column ul li{
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
 .footer_link{
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
-    text-align: center;
     color: var(--footerColor);
 }
 .Footer_Bottom{
@@ -869,57 +874,133 @@ a{
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 4px;
+    opacity: 0.5;
 }
-@media screen and (min-width: 320px) and (max-width: 425px) {
+/* start footer responsive */
+@media screen and (max-width: 1024px){
+    .footer .Footer_Top{
+        padding: 0 38px;
+    }
+}
+@media screen and (max-width: 992px){
+    .footer .Footer_Top{
+        padding: 0 38px;
+    }
+}
+@media screen and (max-width: 768px){
     .footer .container{
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
-        padding: 0 20px;
         gap: 30px;
     }
     .footer .Footer_Top{
-        display: flex;
         flex-direction: column;
         gap: 30px;
         padding: 0;
     }
     .Footer_Top .Grid{
-        display: flex;
-        flex-direction: column;
-        background-color: blue;
-        margin-right: 0;
-    }
-    .grid_logo{
-        margin-top: 32px;
-    }
-    .Footer_Button{
-        width: 147px;
+        max-width: 80%;
+        padding-top: 32px;
     }
     .Vector{
-        border: 1px solid var(--vectorColor);
         height: 0;
     }
     .Links{
-        margin-left: 0;
-        /* flex-direction: column;
-        gap: 10px; */
-    }
-    .Content{
-        flex-direction: column;
-        gap: 48px;
         padding-top: 0;
     }
+    .Content{
+        flex-wrap: wrap;
+        gap: 48px;
+    }
     .Footer_Column{
-        width: calc((100% - 96px)/2);
+        width: calc((100% - 48px)/2);
         gap: 30px;
     }
     .Footer_Bottom{
-        border-top: 1px solid var(--vectorColor);
         padding: 30px 32px;
+    }
+    .Footer_Bottom .Copyright{
         display: flex;
-        justify-content: space-between;
-        background-color: rgb(51, 80, 80);
+        flex-direction: column;
+        text-align: center;
     }
 }
+@media screen and (max-width: 576px){
+    .footer .container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer .Footer_Top{
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+    .Footer_Top .Grid{
+        max-width: 80%;
+        padding-top: 32px;
+    }
+    .Vector{
+        height: 0;
+    }
+    .Links{
+        padding-top: 0;
+    }
+    .Content{
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+    .Footer_Column{
+        width: calc((100% - 48px)/2);
+        gap: 30px;
+    }
+    .Footer_Bottom{
+        padding: 30px 32px;
+    }
+    .Footer_Bottom .Copyright{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 320px){
+    .footer .container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer .Footer_Top{
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+    .Footer_Top .Grid{
+        max-width: 80%;
+        padding-top: 32px;
+    }
+    .Vector{
+        height: 0;
+    }
+    .Links{
+        padding-top: 0;
+    }
+    .Content{
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+    .Footer_Column{
+        width: calc((100% - 48px)/2);
+        gap: 30px;
+    }
+    .Footer_Bottom{
+        padding: 30px 32px;
+    }
+    .Footer_Bottom .Copyright{
+        text-align: center;
+    }
+}
+/* end footer responsive */
 /* end footer section */
