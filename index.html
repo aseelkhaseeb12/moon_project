@@ -17,7 +17,7 @@
                 <div class="logo">
                     <img src="./assets/img/logo.svg" alt="logo">
                 </div>
-                <div class="list">
+                <nav class="list">
                     <ul>
                         <li>
                             <a href="#">home</a>
@@ -32,8 +32,8 @@
                             <a href="#">contact</a>
                         </li>
                     </ul>
-                </div>
-                <div class="icons">
+                </nav>
+                <nav class="icons">
                     <ul>
                         <li class="hidden_icon">
                             <a href="#">
@@ -56,7 +56,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -65,14 +65,18 @@
         <!-- start slider section -->
         <section class="slider">
             <div class="slider_image">
-                <img src="./assets/img/slider/slider.webp" alt="slider_image">
+                <img src="./assets/img/slider/slider.webp" alt="slider image">
             </div>
             <div class="container">
                 <div class="slider_shop">
-                    <img src="./assets/img/slider/Icon.svg" alt="Icon">
-                    <p class="shop_para">Handcrafted in Viet Nam since 1650</p>
-                    <h1 class="heading_shop">bat trang <br> dinner set</h1>
-                    <a class="shop_button" href="#">shop now</a>
+                    <div class="icon">
+                        <img src="./assets/img/slider/Icon.svg" alt="Icon">
+                    </div>
+                    <div class="slider_text">
+                        <p class="shop_para">Handcrafted in Viet Nam since 1650</p>
+                        <h1 class="heading_shop">bat trang <br> dinner set</h1>
+                    </div>
+                    <button class="shop_button">shop now</button>
                 </div>
             </div>
         </section>
@@ -107,8 +111,8 @@
                 <div class="row">
                     <div class="text_collection">
                         <h2>up to 40% off our christmas collection</h2>
-                        <p>lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
-                        <a href="#">shop now</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                        <button>shop now</button>
                     </div>
                     <div class="image_collection">
                         <img src="./assets/img/christmas/christmas.webp" alt="christmas">
@@ -117,66 +121,113 @@
             </div>
         </section>
         <!-- end christmas_collections section -->
-        <!-- start sellers section -->
         <section class="sellers">
             <h2>best sellers</h2>
             <div class="container">
                 <div class="row">
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_one.webp" alt="product_one">
-                        <p class="product_name">small ecru ceramic compote</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_one.webp" alt="product one image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">small ecru ceramic compote</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_two.webp" alt="product_two">
-                        <p class="product_name">warrick white vase 14"</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_two.webp" alt="product two image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">warrick white vase 14"</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_three.webp" alt="product_three">
-                        <p class="product_name">porcelain dinner plate</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur .</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_three.webp" alt="product one image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">porcelain dinner plate</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur .</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_four.webp" alt="product_four">
-                        <p class="product_name">warrick white vase 20</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="image_product">
+                                <img src="./assets/img/sellers/product_four.webp" alt="product four image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">warrick white vase 20</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_five.webp" alt="product_five">
-                        <p class="product_name">rounded dual handled vase</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_five.webp" alt="product five image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">rounded dual handled vase</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_six.webp" alt="product_six">
-                        <p class="product_name">marin white dinner plate</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_six.webp" alt="product six image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">marin white dinner plate</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_seven.webp" alt="product_seven">
-                        <p class="product_name">tall cream ceramic vase</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_seven.webp" alt="product seven image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">tall cream ceramic vase</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                     <div class="seller_item">
-                        <img src="./assets/img/sellers/product_eight.webp" alt="product_eight">
-                        <p class="product_name">luana bowl</p>
-                        <p class="product_price">$49.00</p>
-                        <p class="product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
-                        <a class="add_product" href="#">add to cart</a>
+                        <div class="top">
+                            <div class="product_image">
+                                <img src="./assets/img/sellers/product_eight.webp" alt="product eight image">
+                            </div>
+                            <div class="Product_info">
+                                <p class="product_name">luana bowl</p>
+                                <p class="product_price">$49.00</p>
+                            </div>
+                            <p class="product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
+                        </div>
+                        <button class="add_product">add to cart</button>
                     </div>
                 </div>
             </div>
@@ -188,21 +239,20 @@
                 <div class="row">
                     <div class="text_products">
                         <h2>made in viet nam since 1450</h2>
-                        <p>lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
-                        <a href="#">lear more</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                        <button>lear more</button>
                     </div>
                     <div class="image_products">
                         <img src="./assets/img/products/product_one.webp" alt="product_one">
                     </div>
-                    <div class="image_products">
+                    <div class="image_products image-order">
                         <img src="./assets/img/products/product_two.webp" alt="product_two">
                     </div>
                     <div class="text_products">
                         <h2>our history</h2>
-                        <p>lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit</p>
-                        <a href="#">lear more</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit</p>
+                        <button>lear more</button>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -220,14 +270,10 @@
                                 <img src="./assets/img/discover_products/discover_products_one.webp" alt="discover_products_one">
                             </div>
                             <div class="Product_info">
-                                <div class="Product_name">
-                                    <p>porcelain dinner plate</p>
-                                </div>
-                                <div class="Product_Price">
-                                    <p>$49.00</p>
-                                </div>
+                                <p class="Product_name">porcelain dinner plate</p>
+                                <p class="Product_Price">$49.00</p>
                             </div>
-                            <p class="Product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
+                            <p class="Product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
                         </div>
                         <button class="Secondary_Button">
                             add to cart
@@ -239,14 +285,10 @@
                                 <img src="./assets/img/discover_products/discover_products_two.webp" alt="discover_products_two">
                             </div>
                             <div class="Product_info">
-                                <div class="Product_name">
-                                    <p>ophelia matte natural vase</p>
-                                </div>
-                                <div class="Product_Price">
-                                    <p>$49.00</p>
-                                </div>
+                                <p class="Product_name">ophelia matte natural vase</p>
+                                <p class="Product_Price">$49.00</p>
                             </div>
-                            <p class="Product_desc">lorem ipsum dolor sit amet conse bolli tetur.</p>
+                            <p class="Product_desc">Lorem ipsum dolor sit amet conse bolli tetur.</p>
                         </div>
                         <button class="Secondary_Button">
                             add to cart
@@ -258,14 +300,10 @@
                                 <img src="./assets/img/discover_products/discover_products_three.webp" alt="discover_products_three">
                             </div>
                             <div class="Product_info">
-                                <div class="Product_name">
-                                    <p>porcelain dinner plate</p>
-                                </div>
-                                <div class="Product_Price">
-                                    <p>$49.00</p>
-                                </div>
+                                <p class="Product_name">porcelain dinner plate</p>
+                                <p class="Product_Price">$49.00</p>
                             </div>
-                            <p class="Product_desc">lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
+                            <p class="Product_desc">Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu.</p>
                         </div>
                         <button class="Secondary_Button">
                             add to cart
@@ -277,14 +315,10 @@
                                 <img src="./assets/img/discover_products/discover_products_four.webp" alt="discover_products_four">
                             </div>
                             <div class="Product_info">
-                                <div class="Product_name">
-                                    <p>luana bowl</p>
-                                </div>
-                                <div class="Product_Price">
-                                    <p>$49.00</p>
-                                </div>
+                                <p class="Product_name">luana bowl</p>
+                                <p class="Product_Price">$49.00</p>
                             </div>
-                            <p class="Product_desc">lorem ipsum dolor sit amet conse.</p>
+                            <p class="Product_desc">Lorem ipsum dolor sit amet conse.</p>
                         </div>
                         <button class="Secondary_Button">
                             add to cart
@@ -302,8 +336,8 @@
                     <div class="text_blog">
                         <p class="blog_t_one">tableware</p>
                         <h2 class="blog_title">the secrets to a kitchen room</h2>
-                        <p class="blog_desc">lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
-                        <button class="read_blog" href="#">read more</button>
+                        <p class="blog_desc">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                        <button class="read_blog">read more</button>
                     </div>
                     <div class="image_blog">
                         <img src="./assets/img/blog/blog.webp" alt="blog">
@@ -322,130 +356,130 @@
         <!-- end Newsletter section -->
     </main>
     <!-- start footer section -->
-        <footer class="footer">
-            <div class="container">
-                <div class="Footer_Top">
-                    <div class="Grid">
-                        <div class="grid_logo">
-                            <img src="./assets/img/footer_logo.svg" alt="logo">
-                        </div>
-                        <div class="Footer_Description">
-                            <p>lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
-                        </div>
-                        <button class="Footer_Button">
-                            <p>Get started</p>
-                            <img src="assets/img/Arrow_Right.svg" alt="Arrow Right">
-                        </button>
+    <footer class="footer">
+        <div class="container">
+            <div class="Footer_Top">
+                <div class="Grid">
+                    <div class="grid_logo">
+                        <img src="./assets/img/footer_logo.svg" alt="logo">
                     </div>
-                    <div class="Vector"></div>
-                    <div class="Links">
-                        <div class="Content">
-                            <div class="Footer_Column">
-                                <p class="Footer_Title">about us</p>
-                                <div class="Grid_Column">
-                                    <ul>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Mission
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Our team
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Awards
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Testimonials
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Privacy policy
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="Footer_Column">
-                                <p class="Footer_Title">services</p>
-                                <div class="Grid_Column">
-                                    <ul>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Web design
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Web development
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Mobile design
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                UI/UX design
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Branding design
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="Footer_Column">
-                                <p class="Footer_Title">portfolio</p>
-                                <div class="Grid_Column">
-                                    <ul>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Corporate websites
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                E-commerce
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Mobile apps
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                Landing pages
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="footer_link" href="#">
-                                                UI/UX projects
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="Footer_Description">
+                        <p>lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
                     </div>
+                    <button class="Footer_Button">
+                        <p>Get started</p>
+                        <img src="assets/img/Arrow_Right.svg" alt="Arrow Right">
+                    </button>
                 </div>
-                <div class="Footer_Bottom">
-                    <p class="Copyright">
-                        Copyright © 2023 Moon| All Rights Reserved | <span>Terms and Conditions | Privacy Policy</span>
-                    </p>
+                <div class="Vector"></div>
+                <div class="Links">
+                    <div class="Content">
+                        <div class="Footer_Column">
+                            <p class="Footer_Title">about us</p>
+                            <div class="Grid_Column">
+                                <ul>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Mission
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Our team
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Awards
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Privacy policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Footer_Column">
+                            <p class="Footer_Title">services</p>
+                            <div class="Grid_Column">
+                                <ul>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Web design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Web development
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Mobile design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            UI/UX design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Branding design
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Footer_Column">
+                            <p class="Footer_Title">portfolio</p>
+                            <div class="Grid_Column">
+                                <ul>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Corporate websites
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            E-commerce
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Mobile apps
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            Landing pages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer_link" href="#">
+                                            UI/UX projects
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <!-- end footer section -->
+            <div class="Footer_Bottom">
+                <p class="Copyright">
+                    Copyright © 2023 Moon| All Rights Reserved | <span>Terms and Conditions | Privacy Policy</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer section -->
 </body>
 </html>
